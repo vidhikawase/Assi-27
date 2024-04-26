@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolate</title>
+    <style>
+        
+        .heading{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-heading{
+            text-align: center;
+        }
+        .theme-toggle{
+            height: 80px;
+            margin-left: 5px;
+        }
+        p{
+            font-size: 30px;
+        }
+        li{
+            font-size: 25px;
+        }
+        .chocolate{
+            display: block;
+            margin: 20px  auto;
+            width: 500px;
+        }
+        .sub-heading{
+            font-size: 25px;
+        }
+        .active{
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: white;
+        }
+        .dark-theme{
+            background-color: black;
+            color: white;
+        }
+        .light-theme{
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body id="body" class="">
+
+    <img src="moon.png" alt="dark" id="dark" class="theme-toggle active " id="dark" onclick="dark()"/> 
+
+    <img src="sun.png" alt="light" id="light" class="theme-toggle" id="light" onclick="light()"/>
+
+    <div class="container">
+       
+
+        <img src="chocolate.jpeg"light on" class="chocolate" id="lightoff"/>
+        
+       <div class="heading">
+        <p>Chocolate</p> &nbsp;&nbsp;&nbsp;
+        <H1>Dark Chocolate</H1>
+       </div>
+
+        <p>Chocolate is created from the cocoa bean. A cacao tree with fruit pods in various stages of ripening. Roughly two-thirds of the entire world's cocoa is produced in West Africa, with 43% sourced from Côte d'Ivoire, where, as of 2007, child labor is a common practice to obtain the product.
+           
+
+    </div>
+
+    <!-- functions -->
+<script>
+    function dark()
+    {
+        const carimage = document.getElementById('lightoff');
+        
+
+        
+       const darkimage = document.getElementById('dark');
+       darkimage.classList.add("active");
+
+       const lightimage = document.getElementById('light');
+       lightimage.classList.remove("active");
+
+        const darktheme = document.getElementById('body');
+        darktheme.className = 'dark-theme';
+        
+    }
+
+    function light()
+    {
+        const carimage = document.getElementById('lightoff');
+       
+
+        const darkimage = document.getElementById('dark');
+       darkimage.classList.remove("active");
+
+       const lightimage = document.getElementById('light');
+       lightimage.classList.add("active");
+
+       const lighttheme = document.getElementById('body');
+        lighttheme.className = 'light-theme';
+    }
+</script>
+    
+</body>
+</html>
